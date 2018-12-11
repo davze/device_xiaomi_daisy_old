@@ -286,6 +286,11 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_PACKAGES += \
     sysinit
 
+# Perf
+PRODUCT_BOOT_JARS += \
+    QPerformance \
+    UxPerformance
+
 # Input
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/keylayout/ft5435_ts.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/ft5435_ts.kl \
