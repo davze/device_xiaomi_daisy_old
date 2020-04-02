@@ -359,6 +359,10 @@ sys.thermal.data.path=/data/vendor/thermal/
 PRODUCT_PROPERTY_OVERRIDES += \
 persist.sys.disable_rescue=true
 
+# Netflix
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.netflix.bsp_rev=Q660-13149-1
+
 #Dolby Plus
 PRODUCT_PROPERTY_OVERRIDES += \
 sys.keep_app_1=com.dolby.ds1appUI
