@@ -35,6 +35,7 @@ allow untrusted_app firmware_file:dir { search };
 allow untrusted_app sysfs_kgsl:dir search;
 allow untrusted_app sysfs_kgsl:file { open read };
 allow untrusted_app camera_prop:file { getattr open read };
+<<<<<<< HEAD
 allow untrusted_app theme_prop:file { read };
 allow untrusted_app net_dns_prop:file { read };
 allow untrusted_app proc:file { read };
