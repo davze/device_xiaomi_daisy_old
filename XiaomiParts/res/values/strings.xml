@@ -14,6 +14,9 @@
     <!-- Audio amplification -->
     <string name="headphone_gain">Headphone gain</string>
     <string name="microphone_gain">Microphone gain</string>
+    <string name="earpiece_gain">Earpiece gain (Calls)</string>
+    <string name="speaker_gain">Speaker gain</string>
+
 
     <!-- USB fastcharge -->
     <string name="fastcharge_title">Enable USB Fastcharge</string>
