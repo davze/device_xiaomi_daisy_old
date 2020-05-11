@@ -30,3 +30,4 @@ allow system_app sysfs:file { read };
 allow system_app system_data_file:dir { create };
 allow system_app system_data_file:dir { setattr };
 allow system_app system_data_file:file { create };
+allow system_app sysfs_fps:file rw_file_perms;
