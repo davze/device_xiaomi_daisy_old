@@ -3,6 +3,8 @@ package com.xiaomi.parts;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import androidx.preference.PreferenceManager;
 import android.provider.Settings;
 
 import com.xiaomi.parts.kcal.Utils;
@@ -18,6 +20,8 @@ public class BootReceiver extends BroadcastReceiver implements Utils {
     //        "max_brightness";
 
     public void onReceive(Context context, Intent intent) {
+
+        SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(context);
 
         if (Settings.Secure.getInt(context.getContentResolver(), PREF_ENABLED, 0) == 1) {
             FileUtils.setValue(KCAL_ENABLE, Settings.Secure.getInt(context.getContentResolver(),
@@ -59,6 +63,11 @@ public class BootReceiver extends BroadcastReceiver implements Utils {
         context.startService(new Intent(context, DiracService.class));
 	//Ambient
         context.startService(new Intent(context, SensorsDozeService.class));
+
+        boolean enabled = sharedPrefs.getBoolean(DeviceSettings.PREF_KEY_FPS_INFO, false);
+        if (enabled) {
+            context.startService(new Intent(context, FPSInfoService.class));
+        }
 
     }
 }
