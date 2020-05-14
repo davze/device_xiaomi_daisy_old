@@ -295,3 +295,7 @@ sys.thermal.data.path=/data/vendor/thermal/
 # Rescue party
 PRODUCT_PROPERTY_OVERRIDES += \
 persist.sys.disable_rescue=true
+
+#Dolby Plus
+PRODUCT_PROPERTY_OVERRIDES += \
+sys.keep_app_1=com.dolby.ds1appUI
