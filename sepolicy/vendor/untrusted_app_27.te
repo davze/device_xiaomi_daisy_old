@@ -132,3 +132,6 @@ allow untrusted_app_27 bpf_progs_loaded_prop:file { open };
 allow untrusted_app_27 bpf_progs_loaded_prop:file { getattr };
 allow untrusted_app_27 ctl_LKCore_prop:file { open };
 allow untrusted_app_27 sysfs_kgsl:file { getattr };
+allow untrusted_app_27 init_exec:lnk_file { read };
+allow untrusted_app_27 mnt_vendor_file:lnk_file { read };
+allow untrusted_app_27 init_exec:file { getattr };

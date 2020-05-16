@@ -40,3 +40,4 @@ allow platform_app sysfs_dt_firmware_android:dir { read };
 allow platform_app sysfs_wakeup_reasons:dir { read };
 allow platform_app sysfs_slpi:dir { read };
 allow platform_app spectrum_prop:property_service { set };
+allow platform_app spectrum_prop:file { read open getattr };
