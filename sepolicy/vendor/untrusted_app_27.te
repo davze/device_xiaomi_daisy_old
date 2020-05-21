@@ -135,3 +135,8 @@ allow untrusted_app_27 sysfs_kgsl:file { getattr };
 allow untrusted_app_27 init_exec:lnk_file { read };
 allow untrusted_app_27 mnt_vendor_file:lnk_file { read };
 allow untrusted_app_27 init_exec:file { getattr };
+allow untrusted_app_27 init_exec:lnk_file { getattr };
+allow untrusted_app_27 mnt_vendor_file:lnk_file { getattr };
+allow untrusted_app_27 cache_file:lnk_file { getattr };
+allow untrusted_app_27 vendor_audio_prop:file { read open getattr };
+allow untrusted_app_27 ctl_LKCore_prop:file { getattr };
