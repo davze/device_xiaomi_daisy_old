@@ -24,8 +24,11 @@
 // skips conn update at conn completion
 #define BTA_BLE_SKIP_CONN_UPD  FALSE
 #define BLE_PERIPHERAL_ADV_NAME  FALSE
-#define BT_CLEAN_TURN_ON_DISABLED 1
+#define BT_CLEAN_TURN_ON_DISABLED TRUE
 #define BTM_SCO_ENHANCED_SYNC_ENABLED FALSE
+
+/* Increasing SEPs to 12 from 6 to support SHO/MCast i.e. two streams per codec */
+#define AVDT_NUM_SEPS 12
 
 #define BTA_DISABLE_DELAY 1000 /* in milliseconds */
 #define BTM_WBS_INCLUDED TRUE
