@@ -75,7 +75,6 @@ camera.lowpower.record.enable=1 \
 media.camera.ts.monotonic=1 \
 persist.vendor.camera.CDS=off \
 persist.vendor.camera.video.CDS=off \
-persist.vendor.camera.eis.enable=1 \
 persist.vendor.camera.dual.camera=0 \
 persist.vendor.camera.gyro.disable=0 \
 persist.vendor.camera.isp.clock.optmz=0 \
@@ -117,12 +116,13 @@ persist.camera.llv.fuse=2
 # Expose aux camera for below packages
 PRODUCT_PROPERTY_OVERRIDES += \
 camera.aux.packagelist=org.lineageos.snap,com.google.android.GoogleCameraWide,com.android.camera \
-vendor.camera.aux.packagelist=org.lineageos.snap,com.google.android.GoogleCameraWide,com.android.camera
+vendor.camera.aux.packagelist=org.lineageos.snap,com.google.android.GoogleCameraWide,com.android.camera \
+vendor.camera.aux.packagelist2=com.android.systemui,com.huaqin.cameraautotest,com.huaqin.runtime \
+vendor.camera.aux.packageblacklist=com.discord
 
-# Whatsapp fix
+# HAL1
 PRODUCT_PROPERTY_OVERRIDES += \
-camera.hal1.packagelist=org.thunderdog.challegram,com.instagram.android,com.whatsapp,com.gbwhatsapp \
-vendor.camera.hal1.packagelist=org.thunderdog.challegram,com.instagram.android,com.whatsapp,com.gbwhatsapp 
+vendor.camera.hal1.packagelist=com.skype.raider,com.google.android.talk,com.whatsapp
 
 
 #Temporal Noise Reduction
