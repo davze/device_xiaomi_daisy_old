@@ -127,4 +127,12 @@ public class FileUtils {
         // ignore
         return line;
     }
+    
+    static void setintProp(String prop, int value) {
+        SystemProperties.set(prop, String.valueOf(value));
+    }
+
+    static int getintProp(String prop, int defaultValue) {
+        return SystemProperties.getInt(prop, defaultValue);
+    }
 }

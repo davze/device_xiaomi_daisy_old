@@ -81,6 +81,18 @@
     <string name="preset_obsanity">Obsanity</string>
     <string name="preset_obsanity_ips">Obsanity IPS</string>
 
+    <!-- Spectrum Profiles -->
+    <string name="spectrum_profile_title">Spectrum</string>
+    <string name="spectrum_title">Spectrum Profiles</string>
+    <string name="spectrum_summary">Choose your Spectrum Profiles</string>
+    <string name="spectrum_dialogTitle">Choose your Spectrum Profiles</string>
+
+    <!-- Values for Spectrum Presets -->
+    <string name="spectrum_performance">Performance</string>
+    <string name="spectrum_battery">Battery</string>
+    <string name="spectrum_gaming">Gaming</string>
+    <string name="spectrum_balance">Balance</string>
+
     <!-- Dirac settings -->
     <string name="dirac_title">Mi Sound Enhancer</string>
     <string name="dirac_summary">Optimize audio quality</string>

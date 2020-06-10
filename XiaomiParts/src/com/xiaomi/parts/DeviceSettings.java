@@ -38,6 +38,7 @@ public class DeviceSettings extends PreferenceFragment implements
     private CustomSeekBarPreference mMicrophoneGain;
     private CustomSeekBarPreference mEarpieceGain;
     private CustomSeekBarPreference mSpeakerGain;
+    private SecureSettingListPreference mSPECTRUM;
  
 
     //public static final String PREF_TORCH_BRIGHTNESS = "torch_brightness";
@@ -57,6 +58,8 @@ public class DeviceSettings extends PreferenceFragment implements
     public static final String EARPIECE_GAIN_PATH = "/sys/kernel/sound_control/earpiece_gain";
     public static final String PREF_SPEAKER_GAIN = "speaker_gain";
     public static final String SPEAKER_GAIN_PATH = "/sys/kernel/sound_control/speaker_gain";
+    public static final String PREF_SPECTRUM = "spectrum";
+    public static final String SPECTRUM_SYSTEM_PROPERTY = "persist.spectrum.profile";
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
@@ -75,6 +78,11 @@ public class DeviceSettings extends PreferenceFragment implements
 
         mSpeakerGain = (CustomSeekBarPreference) findPreference(PREF_SPEAKER_GAIN);
         mSpeakerGain.setOnPreferenceChangeListener(this);
+
+        mSPECTRUM = (SecureSettingListPreference) findPreference(PREF_SPECTRUM);
+        mSPECTRUM.setValue(FileUtils.getStringProp(SPECTRUM_SYSTEM_PROPERTY, "0"));
+        mSPECTRUM.setSummary(mSPECTRUM.getEntry());
+        mSPECTRUM.setOnPreferenceChangeListener(this);
 
         //CustomSeekBarPreference torch_brightness = (CustomSeekBarPreference) findPreference(PREF_TORCH_BRIGHTNESS);
         //torch_brightness.setEnabled(FileUtils.fileWritable(TORCH_1_BRIGHTNESS_PATH) &&
@@ -195,6 +203,12 @@ public class DeviceSettings extends PreferenceFragment implements
 
             case PREF_SPEAKER_GAIN:
                  FileUtils.setValue(SPEAKER_GAIN_PATH, (int) value);
+                break;
+
+            case PREF_SPECTRUM:
+                mSPECTRUM.setValue((String) value);
+                mSPECTRUM.setSummary(mSPECTRUM.getEntry());
+                FileUtils.setStringProp(SPECTRUM_SYSTEM_PROPERTY, (String) value);
                 break;
             default:
                 break;
