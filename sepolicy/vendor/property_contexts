@@ -3,6 +3,13 @@ persist.camera.debug.logfile                                  u:object_r:persist
 camera.dual.mode           u:object_r:camera_prop:s0
 persist.camera.            u:object_r:camera_prop:s0
 
+# persist.vendor.camera.bokeh.dumpimg    u:object_r:vendor_camera_prop:s0
+# persist.vendor.camera.HAL3.enabled     u:object_r:vendor_camera_prop:s0
+# vendor.debug.camera.prop_picselfie     u:object_r:vendor_camera_prop:s0
+# vendor.debug.camera.prop_bokeh         u:object_r:vendor_camera_prop:s0
+# vendor.debug.camera.prop_hdr           u:object_r:vendor_camera_prop:s0
+# vendor.debug.camera.prop_dis           u:object_r:vendor_camera_prop:s0
+
 # HAL3
 persist.camera.HAL3.enable                    u:object_r:camera_prop:s0
 

@@ -1,1 +1,2 @@
 allow dpmd ctl_stop_prop:property_service { set };
+allow dpmd vendor_file:file { read open getattr execute };
