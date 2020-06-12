@@ -208,9 +208,9 @@ PRODUCT_PACKAGES += \
     libgenlock \
     libtinyxml
 
-# Device-specific settings
+# DeviceParts
 PRODUCT_PACKAGES += \
-    XiaomiParts \
+    DeviceParts \
     XiaomiDoze
 
 # DRM
@@ -286,7 +286,7 @@ PRODUCT_BOOT_JARS += \
 # init.d support
 PRODUCT_PACKAGES += \
     sysinit
-
+    
 # Perf
 PRODUCT_BOOT_JARS += \
     QPerformance \
@@ -315,6 +315,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sec_config:$(TARGET_COPY_OUT_VENDOR)/etc/sec_config
 
+# JamesDsp
+PRODUCT_PACKAGES += \
+    JamesDSPManager    
+    
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.daisy
