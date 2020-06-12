@@ -15,9 +15,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/rebellion_daisy.mk
+    $(LOCAL_DIR)/aicp_daisy.mk
 
 COMMON_LUNCH_CHOICES := \
-    rebellion_daisy-user \
-    rebellion_daisy-userdebug \
-    rebellion_daisy-eng
+    aicp_daisy-user \
+    aicp_daisy-userdebug \
+    aicp_daisy-eng

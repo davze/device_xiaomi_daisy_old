@@ -23,11 +23,11 @@ $(call inherit-product-if-exists, vendor/xiaomi/ExclusivePack/config.mk)
 $(call inherit-product, device/xiaomi/daisy/device.mk)
 
 # Inherit some common Rebellion stuff
-$(call inherit-product, vendor/rebellion/config/common.mk)
+$(call inherit-product, vendor/aicp/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := daisy
-PRODUCT_NAME := rebellion_daisy
+PRODUCT_NAME := aicp_daisy
 BOARD_VENDOR := Xiaomi
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Mi A2 Lite
@@ -38,9 +38,5 @@ PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME="daisy_sprout"
-
-# The Rebeller
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.rebellion.maintainer=🔥TogoFire🔥    
 
 TARGET_BOOT_ANIMATION_RES := 1080
