@@ -1,0 +1,17 @@
+ [
+  {
+    "repository":  "RebornDaisyProject/daisy_msm8953",
+    "target_path": "kernel/xiaomi/daisy",
+    "branch":      "daisy"
+  },
+  {
+    "repository":  "lupesoltec/vendor_xiaomi_daisy",
+    "target_path": "vendor/xiaomi/daisy",
+    "branch":      "wip"
+  },
+  {
+    "repository":  "AICP/packages_resources_deviceparts",
+    "target_path": "packages/resources/deviceparts",
+    "branch":      "q10.0"
+  }
+]

@@ -1,5 +1,5 @@
 LOCAL_PATH := $(call my-dir)
-ifeq ($(TARGET_DEVICE),$(filter $(TARGET_DEVICE),santoni))
+ifeq ($(TARGET_DEVICE),$(filter $(TARGET_DEVICE),daisy))
 include $(CLEAR_VARS)
 
 LOCAL_MODULE_TAGS := optional
