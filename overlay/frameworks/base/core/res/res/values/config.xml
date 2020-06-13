@@ -673,7 +673,7 @@
 
    <!-- Whether device has a physical display cutout -->
    <bool name="config_physicalDisplayCutout">true</bool>
-
+   
     <!-- Display mode remapping table.
          If the mode names returned by the backend do not match
          the predefined and translated strings in the Settings
@@ -756,7 +756,13 @@
 
     <!-- Whether the device supports Smart Pixels -->
     <bool name="config_enableSmartPixels">false</bool>
+    
+    <!-- Path to the library that contain device specific key handler -->
+    <string name="config_deviceKeyHandlerLib" translatable="false">/system/priv-app/DeviceParts/DeviceParts.apk</string>
 
+<!-- Name of the key handler class -->
+    <string name="config_deviceKeyHandlerClass" translatable="false">org.omnirom.device.KeyHandler</string>    
+    
     <!-- Whether device supports internal audio recording -->
     <bool name="config_hasInternalAudioRecordingSupport">true</bool>
 

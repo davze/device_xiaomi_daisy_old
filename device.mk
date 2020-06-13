@@ -323,7 +323,12 @@ PRODUCT_COPY_FILES += \
 
 # JamesDsp
 PRODUCT_PACKAGES += \
-    JamesDSPManager    
+    JamesDSPManager   
+    
+# Keymaster
+PRODUCT_PACKAGES += \
+    android.hardware.keymaster@3.0-impl \
+    android.hardware.keymaster@3.0-service
     
 # Lights
 PRODUCT_PACKAGES += \
@@ -462,6 +467,11 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf \
     $(LOCAL_PATH)/configs/sensors/sensor_def_qcomdev.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/sensor_def_qcomdev.conf
 
+# Soong
+PRODUCT_SOONG_NAMESPACES += \
+    device/essential/mata \
+    hardware/google/pixel    
+    
 # TextClassifier smart selection model files
 PRODUCT_PACKAGES += \
     textclassifier.bundle1

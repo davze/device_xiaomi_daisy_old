@@ -39,3 +39,4 @@ allow system_server crash_dump:process { getpgid };
 allow system_server vendor_default_prop:file { read open getattr map };
 allow system_server system_file:dir { write };
 allow system_server init:process { signal };
+allow system_app hal_power_stats_default:binder { call };

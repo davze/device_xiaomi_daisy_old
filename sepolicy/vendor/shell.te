@@ -9,4 +9,6 @@ allow shell postinstall_mnt_dir:dir getattr;
 allow shell rootfs:file getattr;
 allow shell adsprpcd_file:dir getattr;
 allow shell firmware_file:dir getattr;
+allow shell devpts:chr_file { ioctl };
+
 
