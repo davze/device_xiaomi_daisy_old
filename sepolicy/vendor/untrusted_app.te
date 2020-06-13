@@ -35,7 +35,6 @@ allow untrusted_app firmware_file:dir { search };
 allow untrusted_app sysfs_kgsl:dir search;
 allow untrusted_app sysfs_kgsl:file { open read };
 allow untrusted_app camera_prop:file { getattr open read };
-<<<<<<< HEAD
 allow untrusted_app theme_prop:file { read };
 allow untrusted_app net_dns_prop:file { read };
 allow untrusted_app proc:file { read };
@@ -129,3 +128,5 @@ allow untrusted_app adsprpc_prop:file { getattr };
 allow untrusted_app apexd_prop:file { open };
 allow untrusted_app apexd_prop:file { getattr };
 allow untrusted_app bg_boot_complete_prop:file { open };
+allow untrusted_app camera_prop:file { getattr open read };
+allow untrusted_app persist_camera_prop:file { getattr open read };
