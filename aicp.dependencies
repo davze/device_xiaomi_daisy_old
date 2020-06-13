@@ -5,9 +5,9 @@
     "branch":      "daisy"
   },
   {
-    "repository":  "lupesoltec/vendor_xiaomi_daisy",
+    "repository":  "scarymen1325/vendor_xiaomi_daisy",
     "target_path": "vendor/xiaomi/daisy",
-    "branch":      "wip"
+    "branch":      "ten"
   },
   {
     "repository":  "AICP/packages_resources_deviceparts",

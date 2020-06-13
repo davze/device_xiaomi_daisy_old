@@ -48,6 +48,10 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.bluetooth_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth_le.xml \
     frameworks/native/data/etc/android.hardware.camera.flash-autofocus.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.flash-autofocus.xml \
     frameworks/native/data/etc/android.hardware.camera.front.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.front.xml \
+    frameworks/native/data/etc/android.hardware.camera.full.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.full.xml \
+    frameworks/native/data/etc/android.hardware.camera.raw.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.raw.xml \
+    frameworks/native/data/etc/android.hardware.camera.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.xml \
+    frameworks/native/data/etc/android.hardware.camera.autofocus.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.autofocus.xml \
     frameworks/native/data/etc/android.hardware.consumerir.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.consumerir.xml \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml \
     frameworks/native/data/etc/android.hardware.location.gps.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.location.gps.xml \
@@ -162,14 +166,16 @@ BOOT_SECURITY_PATCH = $(PLATFORM_SECURITY_PATCH)
 
 # Camera
 PRODUCT_PACKAGES += \
+    android.frameworks.cameraservice.common@2.0 \
+    android.frameworks.cameraservice.device@2.0 \
+    android.frameworks.cameraservice.service@2.0 \
+    android.frameworks.displayservice@1.0_32 \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service \
     android.hardware.camera.provider@2.5 \
     vendor.qti.hardware.camera.device@1.0 \
-    vendor.qti.hardware.camera.postproc@1.0 \
-    android.hardware.camera.device@3.4 \
-    vendor.qti.hardware.camera.device@1.0
-
+    vendor.qti.hardware.camera.postproc@1.0
+    
 # Codec2
 PRODUCT_PACKAGES += \
     libcodec2_vndk.vendor \
@@ -461,8 +467,8 @@ PRODUCT_PACKAGES += \
 
 # Thermal
 PRODUCT_PACKAGES += \
-    android.hardware.thermal@2.0-impl \
-    android.hardware.thermal@2.0-service \
+    android.hardware.thermal@1.0-impl \
+    android.hardware.thermal@1.0-service \
     thermal.msm8953
 
 PRODUCT_COPY_FILES += \
